@@ -7,7 +7,6 @@ const mqttClientId = 'mqttjs01';
 
 var client = null;
 
-//const client = mqtt.connect(url, options);
 
 client = mqtt.connect(mqttServer, { clientId: mqttClientId });
 
@@ -38,9 +37,7 @@ setInterval(function () {
 
     batteryLevel().then(level => {
 
-        //var valueRef = parseInt(getRandomArbitrary(10, 20));
         var valueRef = parseInt(level * 100);
-        //console.log(valueRef);
 
         var data1 = {
             "id" : deviceId,
