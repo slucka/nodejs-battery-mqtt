@@ -98,10 +98,10 @@ setInterval(function () {
 
     ping.sys.probe(vm_ip, function(isAlive){
         if (isAlive){
-            console.log('############### Is Not Alive ###############');
+            console.log('############### Is Alive ###############');
             sendMttqData(0.1)
         }else{
-            console.log('############### Is Alive ###############');
+            console.log('############### Is Not Alive ###############');
             batteryLevel().then(level => {
                 sendMttqData(level)
             });
