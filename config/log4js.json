@@ -1,0 +1,15 @@
+{
+    "appenders": { 
+        "file": { 
+            "type": "dateFile", 
+            "filename": "logs/battery-level",
+            "pattern": "yyyy-MM-dd.log",
+            "alwaysIncludePattern": true
+            } 
+        },
+    "categories": { 
+        "default": { 
+            "appenders": ["file"], 
+            "level": "debug" } 
+        }
+}
